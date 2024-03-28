@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 import logger from "../utils/logger.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const connectDB = () => {
   try {
     mongoose.set("strictQuery", true);
 
-    mongoose.connect("mongodb://localhost:27017/events", {
+    mongoose.connect(process.env.MONGO_URI, {
       useUnifiedTopology: true,
     });
 
