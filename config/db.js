@@ -5,7 +5,7 @@ const connectDB = () => {
   try {
     mongoose.set("strictQuery", true);
 
-    mongoose.connect(process.env.MONGO_URI, {
+    mongoose.connect("mongodb://localhost:27017/events", {
       useUnifiedTopology: true,
     });
 
