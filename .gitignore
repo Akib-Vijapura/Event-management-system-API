@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+# Environment variables file
+.env
+# macOS
+.DS_Store
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+# Miscellaneous
+Thumbs.db
+Desktop.ini
