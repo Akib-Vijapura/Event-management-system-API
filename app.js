@@ -14,6 +14,12 @@ dotenv.config({ path: "./.env" });
 
 const PORT = process.env.PORT || 5100;
 
+app.get("/", (req, res) => {
+  res.send(
+    "Welcome to the event management system backend by Akib Vijapura for more visit : https://github.com/Akib-Vijapura/Event-management-system-API"
+  );
+});
+
 app.use(express.json());
 
 app.use("/api/v1/events", eventRoutes);
