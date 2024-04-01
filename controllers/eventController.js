@@ -106,12 +106,12 @@ const findEvents = async (req, res) => {
       events.map(async (event) => {
         // Make request to Weather API to retrieve weather information
         const weatherResponse = await axios.get(
-          `https://gg-backend-assignment.azurewebsites.net/api/Weather?code=${process.env.WEATHER_API_CODE}==&city=Port%20${event.cityName}&date=${event.date}`
+          `https://gg-backend-assignment.azurewebsites.net/api/Weather?code=KfQnTWHJbg1giyB_Q9Ih3Xu3L9QOBDTuU5zwqVikZepCAzFut3rqsg==&city=Port%20${event.cityName}&date=${event.date}`
         );
 
         // Make request to Distance API to calculate distance between user and event location
         const distanceResponse = await axios.get(
-          `https://gg-backend-assignment.azurewebsites.net/api/Distance?code=${process.env.DISTANCE_API_CODE}==&latitude1=${latitude}&longitude1=${longitude}&latitude2=${event.latitude}&longitude2=${event.longitude}`
+          `https://gg-backend-assignment.azurewebsites.net/api/Distance?code=IAKvV2EvJa6Z6dEIUqqd7yGAu7IZ8gaH-a0QO6btjRc1AzFu8Y3IcQ==&latitude1=${latitude}&longitude1=${longitude}&latitude2=${event.latitude}&longitude2=${event.longitude}`
         );
 
         // Extract weather information and distance from the responses
